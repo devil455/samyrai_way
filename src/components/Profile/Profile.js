@@ -1,10 +1,10 @@
 import React from "react";
 import classes from './Profile.module.css'
-import Post from './Posts/Post/Post'
+import Post from '../Post/Post'
 
 const Profile = () =>{
     return(
-    <div className={classes.content}>
+    <div className={classes.profile}>
    <div>Content:</div> 
    <img src="https://info.sibnet.ru/ni/560/560158w_1578630043.jpg"></img>
    <div>ava + description</div>
