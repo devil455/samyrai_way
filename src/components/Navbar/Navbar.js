@@ -8,10 +8,9 @@ const Navbar = () => {
             <div>NAVBAR:</div>
             <div><a href="/profile">Профиль</a></div>
             <div><a href="/dialogs">Сообщения</a></div>
-            <div>Новости</div>
-            <div>Музыка</div>
-            <div></div>
-            <div>Настройки</div>
+            <div><a href="/news">Новости</a></div>
+            <div><a href="/music">Музыка</a></div>
+            <div><a href="/settings">Настройки</a></div>
 
 
         </header>
