@@ -1,10 +1,9 @@
 import React from "react";
-import classes from './Profile.module.css'
 import Post from '../Post/Post'
 
 const Profile = () =>{
     return(
-    <div className={classes.profile}>
+    <div className='app-wrapper-content'>
    <div>Content:</div> 
    <img src="https://info.sibnet.ru/ni/560/560158w_1578630043.jpg"></img>
    <Post name = 'Alex' age = '30' massege ='Hi,how are you?' likesCount='12'/>
