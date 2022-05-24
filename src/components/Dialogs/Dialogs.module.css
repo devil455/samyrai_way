@@ -1,0 +1,32 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background-color: aquamarine;
+    
+}
+
+.dialogPerson {
+    color:blueviolet;
+    text-decoration: none;
+    
+
+}
+
+.masseges {
+    grid-area: m;
+    color: rgb(28, 129, 216);
+}
+
+.name {
+    color: rgb(223, 15, 15);
+}
+
+.person {
+    text-decoration: none;
+
+}
+
+.messege {
+    grid-area: m;
+
+}

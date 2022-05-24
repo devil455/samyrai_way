@@ -1,4 +1,10 @@
 .nav {
-    grid-area: n;
-    background-color:rgb(127, 225, 255);
-  }
+  grid-area: n;
+  background-color: rgb(127, 225, 255);
+  padding: 15px;
+  text-decoration: none;
+}
+
+.col {
+  color: rgb(182, 29, 179);
+}
