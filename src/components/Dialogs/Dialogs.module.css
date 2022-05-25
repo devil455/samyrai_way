@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     background-color: aquamarine;
+    text-decoration: underline;
     
 }
 
@@ -29,4 +30,8 @@
 .messege {
     grid-area: m;
 
+}
+.persons{
+    text-decoration: none;
+    color:rgb(24, 23, 25)
 }
