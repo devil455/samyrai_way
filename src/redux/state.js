@@ -9,7 +9,7 @@ let state = {
             { name: 'Alexey', age: 30, massege: 'Im ok, too!', likesCount: 13 },
         ],
     },
-      messagesPage: {
+    messagesPage: {
         dialogsData: [
             { id: 1, name: 'Alex1' },
             { id: 2, name: 'Alex2' },
@@ -26,7 +26,14 @@ let state = {
             { id: 5, mes: 'Hello5' },
         ],
 
-    }
+    },
+    friends: [
+        { name: 'Alex', age: 31, massege: 'Hi,how are you?', likesCount: 12 },
+        { name: 'Vit', age: 36, massege: 'Its ok!', likesCount: 15 },
+        { name: 'Tem', age: 24, massege: 'Und You?', likesCount: 19 },
+        { name: 'Alexey', age: 30, massege: 'Im ok, too!', likesCount: 13 },
+
+    ]
 }
 
 export default state;

@@ -12,6 +12,7 @@ const Navbar = () => {
             <div><NavLink to="/news">Новости</NavLink></div>
             <div><NavLink to="/music">Музыка</NavLink></div>
             <div><NavLink to="/settings">Настройки</NavLink></div>
+            <div><NavLink to="/friends">Друзья</NavLink></div>
 
 
         </header>
