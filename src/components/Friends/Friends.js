@@ -7,7 +7,7 @@ const Friends = (props) => {
     return (
         <div className={classes.friends}>
             <h3>Друзья</h3>
-            {props.name}
+            {friendsItems}
             </div>
         
        
