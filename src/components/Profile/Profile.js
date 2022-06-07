@@ -13,7 +13,7 @@ const Profile = (props) => {
     return (
         <div className='app-wrapper-content'>
             <h3> Content:</h3 >
-            <img src="https://info.sibnet.ru/ni/560/560158w_1578630043.jpg"></img>
+            <img src="https://info.sibnet.ru/ni/560/560158w_1578630043.jpg" alt=''></img>
             <div><h3>Посты:</h3></div>
             {postItems}
             
