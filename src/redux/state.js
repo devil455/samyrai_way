@@ -1,12 +1,12 @@
-
+import {rerenderEntireTree} from './../render' 
 
 let state = {
     profilePage: {
         profilePost: [
             { name: 'Alex', age: 31, massege: 'Hi,how are you?', likesCount: 12 },
             { name: 'Vit', age: 36, massege: 'Its ok!', likesCount: 15 },
-            { name: 'Tem', age: 24, massege: 'Und You?', likesCount: 19 },
-            { name: 'Alexey', age: 30, massege: 'Im ok, too!', likesCount: 13 },
+            { name: 'Tem', age: 24, massege: 'Und1 You?', likesCount: 19 },
+            { name: 'Alexey', age: 32, massege: 'Im ok, too!', likesCount: 13 },
         ],
     },
     messagesPage: {
@@ -35,6 +35,18 @@ let state = {
 
     ]
 }
+// добавляет данный поста по шаблону в profilePost
+export let addNewPost=(postMes)=>{
+    
+    let newPost ={
+        name:'Alex',
+        age:30,
+        massege:postMes,
+        likesCount:12,
+    };
+    state.profilePage.profilePost.push(newPost);
+    rerenderEntireTree(state);
+};
 
 export default state;
 

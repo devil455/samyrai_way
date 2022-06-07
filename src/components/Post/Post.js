@@ -1,15 +1,26 @@
 import React from "react";
 import classes from './Post.module.css'
 
+
+
+
+
 const Post = (props) => {
 
-    let newTextElement =React.createRef(); 
 
-    let addPost = ()=>{
-        let textElement= newTextElement.current.value;
+    let newText = React.createRef();
+
+    let addPost = () => {
+
+
+        let textElement = newText.current.value; //textElement хранит содержимое textarea
+        props.addNewPost(textElement);
+        newText.current.value=''; //обнуляет textarea после публикации поста
+
+
     };
 
-    let addLike = ()=>{
+    let addLike = () => {
         alert('Thanks!');
     };
 
@@ -21,8 +32,8 @@ const Post = (props) => {
             <div>{props.name},{props.age}</div>
             <div>{props.massege}</div>
             <div>
-                <textarea ref={newTextElement}></textarea>
-                <button className={classes.button} onClick={addPost}>send</button>
+                <textarea ref={newText}></textarea>
+                <button onClick={addPost}>send</button>
             </div>
             <div>
                 <button onClick={addLike}>like</button>{props.likesCount}

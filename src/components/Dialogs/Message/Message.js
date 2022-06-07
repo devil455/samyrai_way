@@ -11,11 +11,12 @@ import classes from './../Dialogs.module.css'
 const Message = (props) => {
     let newText = React.createRef();
 
-    let addNewPost = ()=>{
-        let addNewText  = newText.current.value;
-    }
+   // let addNewPost = ()=>{
+     //   let addNewText  = newText.current.value;
+    //}
     let addPost=()=>{
-        alert('Отправлено!')
+        let textElement = newText.current.value;
+        props.addNewPost(textElement);
     }
    
 
