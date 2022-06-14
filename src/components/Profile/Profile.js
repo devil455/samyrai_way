@@ -8,7 +8,7 @@ import Post from '../Post/Post'
 const Profile = (props) => {
    
        
-    let postItems = props.profilePost.map(p=>(<Post name={p.name} age={p.age} massege={p.massege} likesCount={p.likesCount} addNewPost={props.addNewPost}/>))
+    let postItems = props.profilePost.map(p=>(<Post name={p.name} age={p.age} massege={p.massege} likesCount={p.likesCount} addNewPost={props.addNewPost} newPostText={props.newPostText} updateNewPostText={props.updateNewPostText}/>))
 
     return (
         <div className='app-wrapper-content'>

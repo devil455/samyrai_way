@@ -12,7 +12,6 @@ const Post = (props) => {
 
     let addPost = () => {
 
-
         let textElement = newText.current.value; //textElement хранит содержимое textarea
         props.addNewPost(textElement);
         newText.current.value=''; //обнуляет textarea после публикации поста
@@ -24,6 +23,14 @@ const Post = (props) => {
         alert('Thanks!');
     };
 
+    let onTextChange=()=>{
+        let textElement = newText.current.value;
+        props.updateNewPostText(textElement);
+
+        
+
+    }
+
     return (
 
 
@@ -32,7 +39,7 @@ const Post = (props) => {
             <div>{props.name},{props.age}</div>
             <div>{props.massege}</div>
             <div>
-                <textarea ref={newText}></textarea>
+                <textarea onChange={onTextChange} ref={newText} value={props.newPostText}/>
                 <button onClick={addPost}>send</button>
             </div>
             <div>

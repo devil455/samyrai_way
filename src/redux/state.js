@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from './../render' 
+let rerenderEntireTree = () =>{
+    console.log('blablabla')
+}
 
 let state = {
     profilePage: {
@@ -8,6 +10,7 @@ let state = {
             { name: 'Tem', age: 24, massege: 'Und1 You?', likesCount: 19 },
             { name: 'Alexey', age: 32, massege: 'Im ok, too!', likesCount: 13 },
         ],
+        newPostText: ''
     },
     messagesPage: {
         dialogsData: [
@@ -36,17 +39,28 @@ let state = {
     ]
 }
 // добавляет данный поста по шаблону в profilePost
-export let addNewPost=(postMes)=>{
-    
-    let newPost ={
-        name:'Alex',
-        age:30,
-        massege:postMes,
-        likesCount:12,
+export let addNewPost = (postMes) => {
+
+    let newPost = {
+        name: 'Alex',
+        age: 30,
+        massege: postMes,
+        likesCount: 12,
     };
     state.profilePage.profilePost.push(newPost);
     rerenderEntireTree(state);
 };
+
+export let updateNewPostText = (newText) => {
+
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+};
+
+export const subscribe = (observer) =>{
+    rerenderEntireTree = observer;
+
+}
 
 export default state;
 
