@@ -1,11 +1,11 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import state, { subscribe } from './redux/state'
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { addNewPost, updateNewPostText } from './redux/state';
+import store from './redux/state';
 
 //функция обновляет содержимое страницы после изменений в state
 
@@ -14,16 +14,16 @@ import { addNewPost, updateNewPostText } from './redux/state';
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
-      <App state={state} addNewPost={addNewPost} updateNewPostText={updateNewPostText} />
+      <App state={store.getState()} addNewPost={store.addNewPost.bind(store)} updateNewPostText={store.updateNewPostText.bind(store)} />
     </React.StrictMode>
   );
 
 };
 
 
-rerenderEntireTree(state);
+rerenderEntireTree(store.getState());
 
-subscribe(rerenderEntireTree);
+store.subscribe(rerenderEntireTree);
 
 
 
